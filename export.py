@@ -6,7 +6,7 @@ import torchinfo
 import torch
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer
 
-model_name = "Firat/albert-base-v2-finetuned-squad"
+model_name = "csarron/mobilebert-uncased-squad-v2"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForQuestionAnswering.from_pretrained(model_name)
@@ -14,7 +14,7 @@ model = AutoModelForQuestionAnswering.from_pretrained(model_name)
 question = "What's my name?"
 text = """My name is Clara and I live in Berkeley."""
 
-tokenizer_output = tokenizer.encode_plus(question, text, max_length=512, padding='max_length', return_tensors="pt")
+tokenizer_output = tokenizer.encode_plus(question, text, max_length=128, padding='max_length', return_tensors="pt")
 
 input_ids = tokenizer_output["input_ids"]
 attention_mask = tokenizer_output["attention_mask"]
@@ -36,7 +36,7 @@ print(
                 input_ids[0][answer_start:answer_end])))
 
 
-output_dir = "./albert"
+output_dir = "./mobilebert"
 os.makedirs(output_dir, exist_ok=True)
 torch.onnx.export(
     model,

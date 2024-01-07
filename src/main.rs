@@ -10,8 +10,8 @@ fn main() -> Result<()> {
         std::env::var("CONTENT").context("required environment variable CONTENT missing")?;
 
     // TODO: Compress the model + tokenizer with gzip
-    let tokenizer_bytes = include_bytes!("../albert/tokenizer.json");
-    let model_bytes = include_bytes!("../albert/model.onnx");
+    let tokenizer_bytes = include_bytes!("../mobilebert/tokenizer.json");
+    let model_bytes = include_bytes!("../mobilebert/model.onnx");
     let qa = QuestionAnswerer::new_from_memory(tokenizer_bytes, model_bytes, &content)?;
 
     redpanda_transform_sdk::on_record_written(|e, w| -> Result<()> {
