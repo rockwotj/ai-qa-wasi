@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "albert-qa-wasi"
+name = "ai-qa-wasi"
 version = "0.20.7-pre"
 dependencies = [
  "redpanda-transform-sdk",
