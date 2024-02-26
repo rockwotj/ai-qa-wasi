@@ -13,8 +13,8 @@ if false; then
 fi
 
 # Install python deps and export our model.
-#pip3 install --user transformers torch torchinfo onnx
-#python3 export.py
+pip3 install --user transformers torch torchinfo onnx
+python3 export.py
 
 #add the wasi target
 rustup target add wasm32-wasi
@@ -42,8 +42,8 @@ rpk topic create questions answers
 cp ./target/wasm32-wasi/release/ai-qa-wasi.wasm .
 rpk wasm deploy -v
 
-sleep 20
-echo "how many employees does JumpTrading employ?" | rpk topic produce questions
-echo "list the offices of jumptrading?" | rpk topic produce questions
-echo "who founded jumptrading?" | rpk topic produce questions
-echo "does jumptrading own a crypto firm?" | rpk topic produce questions
+#sleep 20
+#echo "how many employees does JumpTrading employ?" | rpk topic produce questions
+#echo "list the offices of jumptrading?" | rpk topic produce questions
+#echo "who founded jumptrading?" | rpk topic produce questions
+#echo "does jumptrading own a crypto firm?" | rpk topic produce questions
