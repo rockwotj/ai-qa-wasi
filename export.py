@@ -14,7 +14,7 @@ model = AutoModelForQuestionAnswering.from_pretrained(model_name)
 question = "What's my name?"
 text = """My name is Clara and I live in Berkeley."""
 
-tokenizer_output = tokenizer.encode_plus(question, text, max_length=128, padding='max_length', return_tensors="pt")
+tokenizer_output = tokenizer.encode_plus(question, text, max_length=349, padding='max_length', return_tensors="pt")
 
 input_ids = tokenizer_output["input_ids"]
 attention_mask = tokenizer_output["attention_mask"]

@@ -4,7 +4,20 @@ output-topic: answers
 language: rust
 env:
   CONTENT: >-
-    Redpanda Data Transforms run directly inside the broker. 
-    The advantage of this is that it simplifies deployment and removes the operational overhead of additional systems.
-    Data transforms let you run common tasks, like filtering, scrubbing, and transcoding, within Redpanda.
-    For example, you may have consumers that require you to redact credit card numbers or convert JSON to Avro.
+    Jump Trading LLC is a proprietary trading firm with a focus on algorithmic and high-frequency trading strategies. 
+    The firm has over 700 employees in Chicago, New York, Austin, London, Tel Aviv, Singapore, Shanghai, Bristol, Gurgaon, 
+    Gandhinagar, Sydney, Amsterdam, Hong Kong, and Paris and is active in futures, options, 
+    cryptocurrency, and equities markets worldwide.
+    The company is a member of the Principal Traders Group, an advisory group formed by the Futures Industry Association (FIA) 
+    to represent principal traders
+    Jump has been privately funded throughout its existence.
+    Jump Trading was founded in 1999 by two former pit traders, Paul Gurinas and Bill Disomma, who met in the 
+    Deutsche Mark pit at the Chicago Mercantile Exchange (CME). While the firm got its start in the open outcry pits, 
+    Jump Trading does most of its trading electronically
+    The company has made substantial investments in high-frequency trading and infrastructure, including a 
+    Belgian microwave tower once owned by NATO, purchased in 2013 by a U.K. affiliate.
+    Gurinas and DiSomma also founded a venture capital firm, Jump Capital, in June 2012. By January 2016, the firm had invested in 30 companies. 
+    Jump Capital also invested $5 million in The Small Exchange in May 2019, a start-up retail trading futures exchange.
+    Jump Trading is a registered broker-dealer and member of multiple exchanges including the CME Group and the New York Stock Exchange.
+    They are also members of most European exchanges including Eurex and the London Stock Exchange.
+    In September 2021, Jump announced their cryptocurrency business through a new brand named Jump Crypto.
