@@ -32,8 +32,8 @@ rpk cluster config set data_transforms_per_core_memory_reservation 536870912
 rpk cluster config set data_transforms_per_function_memory_limit 536870912
 # Since we're hackily embedding the model in the Wasm binary, we need to support large binaries.
 rpk cluster config set data_transforms_binary_max_size 125829120
-# Allow some extra time on startup over the default. This could probably be lower.
-rpk cluster config set data_transforms_runtime_limit_ms 30000
+# Allow some extra time on startup over the default. 
+rpk cluster config set data_transforms_runtime_limit_ms 300000
 # Retart our node.
 rpk container stop
 rpk container start
